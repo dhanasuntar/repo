@@ -1,0 +1,289 @@
+  350  sudo apt-get update
+  351  sudo apt-get install git
+  352  git --version
+  353  git config --global user.name "dhanasuntar"
+  354  git config --global user.email "dhanasuntar@gmail.com"
+  355  git clone "https://github.com/dhanasuntar/branching_development_model.git"
+  356  ls -l
+  357  cd branching_development_model
+  358  git branches -l
+  359  git branches
+  360  git branch
+  361  clear
+  362  git branch
+  363  git checkout M production_master
+  364  clear
+  365  git branch
+  366  git checkout production_branch
+  367  clear
+  368  git branch
+  369  git checkout -b production_branch
+  370  git branch
+  371  git checkout -b development_branch
+  372  git branch
+  373  git checkout production_branch
+  374  git tag 0.1
+  375  git tag l
+  376  git tag -l
+  377  git tag -d l
+  378  git tag -l
+  379  git checkout development_branch
+  380  echo "Git Branching development model file 1" > file1.txt
+  381  ls -l
+  382  git add file1.txt
+  383  git commit -m "Development branch - first commit"
+  384  git push -u origin development_branch
+  385  git log
+  386  echo "File2 added" > file2.txt
+  387  git add file2.txt
+  388  git commit -m "Development branch second commit"
+  389  git push -u origin development_branch
+  390  echo "File3 added" > file3.txt
+  391  git add file3.txt
+  392  git commit -m "Development branch third  commit"
+  393  git push -u origin development_branch
+  394  git log
+  395  ls -l
+  396  cd branchingRepo
+  397  ls -l
+  398  git branch
+  399  git checkout production_branch
+  400  ls -l
+  401  git checkout feature1
+  402  git branch feature1
+  403  git branch feature 2
+  404  git branch feature2
+  405  clear
+  406  git branch
+  407  git checkout feature1
+  408  ls -l
+  409  git checkout development_branch
+  410  git branch -d feature1
+  411  git branch -d feature2
+  412  clear
+  413  git branch
+  414  clear
+  415  git checkout development_branch
+  416  clear
+  417  ls -l
+  418  git branch feature1
+  419  git branch feature2
+  420  git checkout feature1
+  421  ls -l
+  422  git checkout feature2
+  423  ls -l
+  424  git checkout production_branch
+  425  ls -l
+  426  git branch -b hotfix_branch 0.1
+  427  git tag -l
+  428  git branch -b hotfix_branch 0.1
+  429  git branch
+  430  git branch -b hotfix_branch
+  431  git branch -b hotfix_branch
+  432  clear
+  433  git branch
+  434  git checkout -b hotfix_branch 0.1
+  435  ls -l
+  436  vi file1.txt
+  437  echo file1.txt
+  438  git add file1.txt
+  439  git commit -m "fix production issue - hotfix commit"
+  440  git push -u origin hotfix_branch
+  441  ls -l
+  442  git branch
+  443  echo file1.txt
+  444  cat file1.txt
+  445  git checkout production_branch
+  446  git merge hotfix_branch
+  447  ls -l
+  448  cat file1.txt
+  449  git push -u origin production_branch
+  450  ls -l
+  451  git checkout development_branch
+  452  ls -l
+  453  echo "Three" > three.txt
+  454  git add three.txt
+  455  git commit -m "dev branch third commit"
+  456  git push -u origin development_branch
+  457  ls -l
+  458  cat file1.txt
+  459  git checkout hotfix_branch
+  460  git checkout development_branch
+  461  git merge hotfix_branch
+  462  ls -l
+  463  cat file1.txt
+  464  git push -u origin development_branch
+  465  clear
+  466  ls -l
+  467  git branch
+  468  git checkut feature1
+  469  clear
+  470  git checkout feature1
+  471  ls -l
+  472  cat file1.txt
+  473  git checkout production_branch
+  474  git tag 0.2
+  475  git tag -l
+  476  git checkout feature1
+  477  echo "Feature 1 release changes" > ftFile1.txt
+  478  git add ftFile1.txt
+  479  git commit -m "Feature release changes - first commit"
+  480  git push -u origin feature1
+  481  git branch
+  482  git checkout feature2
+  483  echo "Feature Release 2 changes started" >  ft2Start.txt
+  484  git add ft2Start.txt
+  485  git commit -m "Feature Release 2 Changes First Commit"
+  486  git push -u origin feature2
+  487  git checkout feature1
+  488  ls -l
+  489  cat file1.txt
+  490  clear
+  491  ls -l
+  492  echo "Feature Release One second file" > ftFile2.txt
+  493  git add ftFile2.txt
+  494  git commit -m Feature Release 1 - 2nd Commit"
+  495  git commit -m "Feature Release 1 - 2nd Commit"
+  496  q
+  497  qqqqqqqqqq
+  498  ls -l
+  499  cd branchingRepo
+  500  clear
+  501  git branch
+  502  ls -l
+  503  git commit -m "Feature Release 1 - 2nd Commit"
+  504  git push -u origin feature1
+  505  ls -l
+  506  git checkout development_branch
+  507  ls-l
+  508  ls -l
+  509  echo "Four" > four.txt
+  510  git add four.txt
+  511  git commit -m "development branch 4th commit"
+  512  git push -u origin development_branch
+  513  ls  -l
+  514  git merge feature1
+  515  ls -l
+  516  git push -u origin development_branch
+  517  git branch
+  518  git checkout -b release_branch
+  519  ls -l
+  520  git push -u origin release_branch
+  521  git tag 1.0
+  522  git tag -l
+  523  ls -l
+  524  vi ftFile1.txt
+  525  cat ftFile1.txt
+  526  git checkout development_branch
+  527  ls -l
+  528  echo "Five" > five.txt
+  529  git add five.txt
+  530  git commit -m "5th commit" 
+  531  git push -u origin development_branch
+  532  git merge release_branch
+  533  git branch
+  534  ls -l
+  535  git checkout release_branch
+  536  ls -l
+  537  cat ftFile1.txt
+  538  git checkout development_branch
+  539  cat ftFile1.txt
+  540  git branch
+  541  git merge feature1
+  542  ls -l
+  543  clear
+  544  git branch
+  545  ls -l
+  546  git push -u origin development_branch
+  547  cat ftFile1.txt
+  548  git branch
+  549  git merge release_branch
+  550  git push -u origin release_branch
+  551  cat ftFile1.txt
+  552  git log
+  553  ls l
+  554  ls -l
+  555  git push -u origin development_branch
+  556  git branch
+  557  git checkout release_branch
+  558  ls -l
+  559  clear
+  560  git branch
+  561  git checkout development_branch
+  562  git merge release_branch
+  563  git checkout feature2
+  564  git branch
+  565  git commit -m "dev branch"
+  566  cat ftFile1.txt
+  567  git add ftFile1.txt
+  568  git commit -m "dev branch"
+  569  git push -u origin development_branch
+  570  git push -u origin development_branch
+  571  ls -l
+  572  git checkout feature1
+  573  git merge development_branch
+  574  git push -u origin feature1
+  575  echo "Feature Release 1 continue after merge with dev branch" > ftFile3.txt
+  576  git add ftFile3.txt
+  577  git commit -m "Feature Release 1 next commit"
+  578  git push -u origin feature1
+  579  ls -l
+  580  git checkout development_branch
+  581  echo "six" > six.txt
+  582  git add six.txt
+  583  git commit -m "dev branch 6th commit"
+  584  git push -u origin development_branch
+  585  ls -l
+  586  git checkout release_branch
+  587  git checkout production_branch
+  588  git merge release_branch 1.0
+  589  git push -u origin production_branch
+  590  git branch
+  591  git checkout development_branch
+  592  vi six.txt
+  593  git add six.txt
+  594  git commit -m "six file updated and committed"
+  595  git push -u origin development_branch
+  596  git checkout feature1
+  597  ls -l
+  598  vi ftFile3.txt
+  599  git add ftFile3.txt
+  600  git commit -m "feature release 1 updated"
+  601  git push -u origin feature1
+  602  git checkout feature2
+  603  ls -l
+  604  echo "Feature release 2 changes completed" > ft2End.txt
+  605  git add ft2End.txt
+  606  git commit -m "feature lease 2 completed"
+  607  git push -u origin feature2
+  608  clear
+  609  ls -l
+  610  git checkout feature1
+  611  ls -l
+  612  git checkout development_branch
+  613  ls -l
+  614  git checkout release_branch
+  615  ls -l
+  616  git checkout hotfix_branch
+  617  ls -l
+  618  git checkout production_branch
+  619  ls -l
+  620  git branch
+  621  git checkout development_branch
+  622  git merge feature2
+  623  git push -u origin development_branch
+  624  ls -l
+  625  git merge feature1
+  626  git push -u origin development_branch
+  627  git checkout release_branch
+  628  git merge development_branch
+  629  git push -u origin release_branch
+  630  git tag Release2.0
+  631  git checkout production_branch
+  632  git merge release_branch Release2.0
+  633  git push -u origin production_branch
+  634  git checkout master
+  635  git merge production_branch
+  636  git push -u origin master
+  637  ls -l
+  638  git log --oneline
